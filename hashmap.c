@@ -106,16 +106,15 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
  Pair * firstMap(HashMap * map) {
-  long ind = map->current;
-  for (long i = ind + 1; i < map->capacity; i++){
+  map->current = -1;
+  for (long i = 0; i < map->capacity; i++){
     if (map->buckets[i] != NULL){
-      ind = i;
+      map->current = i;
       break;
     }
   }
-  if (ind != map->current && ind != map->capacity){
-    map->current = ind;
-    return map->buckets[ind];
+  if (map->current != -1){
+    return map->buckets[map->current];
   }
   return NULL;
 }
