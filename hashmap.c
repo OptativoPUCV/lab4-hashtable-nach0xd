@@ -120,9 +120,11 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * nextMap(HashMap * map) {
-  map->current = (map->current + 1) % map->capacity;
-  while (map->buckets[map->current] == NULL && map->buckets[map->current]->key != NULL){
-    map->current = (map->current + 1) % map->capacity;
+  for (long i = map->current + 1; i < map->capacity; i++){
+    if (map->buckets[i] != NULL && map->buckets[i]->key != NULL){
+      map->current = i;
+      return map->buckets[map->current];
+    }
   }
-  return map->buckets[map->current];
+  return NULL;
 }
