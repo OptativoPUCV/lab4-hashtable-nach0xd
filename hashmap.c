@@ -114,6 +114,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     }
   }
   if (ind != map->current && ind != map->capacity){
+    map->current = ind;
     return map->buckets[ind];
   }
   return NULL;
