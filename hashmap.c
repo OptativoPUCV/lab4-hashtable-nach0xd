@@ -102,9 +102,9 @@ Pair * firstMap(HashMap * map) {
   for (int i = 0 ; i < map->capacity ; i++){
     if (map->buckets[i] != NULL){
       map->current = i;
-      return map->buckets[i];
     }
   }
+  return map->buckets[map->current];
 }
 
 Pair * nextMap(HashMap * map) {
