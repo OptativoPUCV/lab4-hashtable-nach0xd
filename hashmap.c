@@ -108,5 +108,8 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
   map->current = (map->current + 1) % map->capacity;
+  while (map->buckets[map->current] == NULL){
+    map->current = (map->current + 1) % map->capacity;
+  }
   return map->buckets[map->current];
 }
