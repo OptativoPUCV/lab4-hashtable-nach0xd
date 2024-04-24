@@ -114,7 +114,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     }
   }
   if (map->current != -1){
-    return map->buckets[map->current]->value;
+    return map->buckets[map->current];
   }
   return NULL;
 }
