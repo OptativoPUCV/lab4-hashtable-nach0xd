@@ -28,3 +28,9 @@ hashmap.c:48:3: error: ‘else’ without a previous ‘if’
 cc1: all warnings being treated as errors
 Compilation failed
 5882051
+Wed 24 Apr 2024 08:34:13 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|4
+total_score: 30/70
+e158e73
