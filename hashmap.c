@@ -97,14 +97,15 @@ Pair * searchMap(HashMap * map,  char * key) {
   return NULL;
 }
 
-Pair * firstMap(HashMap * map) {
+Pair * firstMap(HashMap * map){
   map->current = -1;
-  for (int i = 0 ; i < map->capacity ; i++){
-    if (map->buckets[i] != NULL){
+  for(int i = 0; i < map->capacity; i++){
+    if(map->buckets[i] != NULL){
       map->current = i;
+      return map->buckets[i];
     }
   }
-  return map->buckets[map->current];
+  return NULL;
 }
 
 Pair * nextMap(HashMap * map) {
