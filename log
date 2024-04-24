@@ -40,3 +40,20 @@ Wed 24 Apr 2024 08:42:24 PM UTC:
  tests:  8|3
 total_score: 40/70
 2f7fcc2
+Wed 24 Apr 2024 08:54:16 PM UTC: 
+ hashmap.c | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:78:35: error: expected statement before ‘)’ token
+   78 |   while(map->buckets[pos] != NULL)){
+      |                                   ^
+hashmap.c:78:3: error: this ‘while’ clause does not guard... [-Werror=misleading-indentation]
+   78 |   while(map->buckets[pos] != NULL)){
+      |   ^~~~~
+hashmap.c:78:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+   78 |   while(map->buckets[pos] != NULL)){
+      |                                    ^
+cc1: all warnings being treated as errors
+Compilation failed
+2ee1c0e
