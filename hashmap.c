@@ -112,6 +112,7 @@ Pair * searchMap(HashMap * map,  char * key) {
       map->current = i;
       return map->buckets[i];
     }
+    map->current = i;
   }
   return NULL;
 }
